@@ -11,3 +11,25 @@ Aprendi também a como criar metódos com indexadores.
 Ao colocar o **<>** na frente do nome da classe, estamos declarando que a classe é de um tipo genérico que será definida no momento em que será instânciada
 
 Váriaveis do tipo valor e tipo referência
+
+Application --View and Controller
+
+Services --Business Logic
+    - Interfaces
+        - IProcessAudioService
+    - Services
+        - ProcessAudioService
+
+Infra --Data Storage
+    - Interfaces
+        - IBasicRepository
+        - IAudioRepository
+        - IAudioAlertsRepository
+    - Repositories
+        - BasicRepository
+        - AudioRepository
+        - AudioAlertsRepository
+
+Entities --Model
+    - Audio
+    - AudioAlerts
