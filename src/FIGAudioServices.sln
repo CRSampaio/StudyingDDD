@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIGAudioServices.Entities", "FIGAudioServices.Entities\FIGAudioServices.Entities.csproj", "{69442700-7E38-4720-A3AC-CB8B74F07910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIGAudioServices.Infra", "FIGAudioServices.Infra\FIGAudioServices.Infra.csproj", "{59A30462-9188-4B3F-89AF-491C2421B7BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69442700-7E38-4720-A3AC-CB8B74F07910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69442700-7E38-4720-A3AC-CB8B74F07910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69442700-7E38-4720-A3AC-CB8B74F07910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69442700-7E38-4720-A3AC-CB8B74F07910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59A30462-9188-4B3F-89AF-491C2421B7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A30462-9188-4B3F-89AF-491C2421B7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A30462-9188-4B3F-89AF-491C2421B7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59A30462-9188-4B3F-89AF-491C2421B7BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
