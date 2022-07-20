@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIGAudioServices.Entities",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIGAudioServices.Infra", "FIGAudioServices.Infra\FIGAudioServices.Infra.csproj", "{59A30462-9188-4B3F-89AF-491C2421B7BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIGAudioServices.Services", "FIGAudioServices.Services\FIGAudioServices.Services.csproj", "{3968094C-5337-4F4F-A7FF-1FB58B0AAC97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{59A30462-9188-4B3F-89AF-491C2421B7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59A30462-9188-4B3F-89AF-491C2421B7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59A30462-9188-4B3F-89AF-491C2421B7BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3968094C-5337-4F4F-A7FF-1FB58B0AAC97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3968094C-5337-4F4F-A7FF-1FB58B0AAC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3968094C-5337-4F4F-A7FF-1FB58B0AAC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3968094C-5337-4F4F-A7FF-1FB58B0AAC97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
