@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\FIGAudioServices.Entities\FIGAudioServices.Entities.csproj" />
+    <ProjectReference Include="..\FIGAudioServices.Infra\FIGAudioServices.Infra.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
