@@ -1,19 +1,23 @@
-namespace FIGAudioServices.Entities.Files;
-public class AudioAlert
+namespace FIGAudioServices.Entities.Files
 {
-    public int Id { get; set; }
-    public Audio Audio
+    public class AudioAlert
     {
-        get => Audio;
-        set
-        {
-            if (value is null)
-            {
-                throw new ArgumentNullException(nameof(Audio));
-            }
+        public int Id { get; set; }
 
-            Audio = value;
+        public Audio Audio
+        {
+            get => Audio;
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(Audio));
+                }
+
+                Audio = value;
+            }
         }
+        
+        public string? Description { get; set; }
     }
-    public string? Description { get; set; }
 }
