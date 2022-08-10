@@ -1,4 +1,6 @@
-﻿namespace FIGAudioServices.Infra.Interfaces.Base
+﻿using FIGAudioServices.Infra.Context;
+
+namespace FIGAudioServices.Infra.Interfaces.Base
 {
     public interface IBasicRepository<T> where T : class
     {
