@@ -2,28 +2,24 @@ using FIGAudioServices.Entities.Files;
 using FIGAudioServices.Infra.Context;
 using FIGAudioServices.Infra.Interfaces.Files;
 using FIGAudioServices.Infra.Repositories.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace FIGAudioServices.Infra.Repositories.Files
 {
     public class AudioAlertsRepository : BasicRepository<AudioAlert>, IAudioAlertsRepository
     {
-        private readonly FIGAudioServicesDbContext Context;
-        
-        public AudioAlertsRepository(FIGAudioServicesDbContext context)
+        public AudioAlertsRepository(FIGAudioServicesDbContext context) : base(context)
         {
-            Context = context;
         }
 
         public async Task<IList<AudioAlert>> GetAllAsync()
         {
-            await Task.CompletedTask;
-            throw new NotImplementedException();
+            return await Context.AudioAlerts!.ToListAsync();
         }
 
-        public async Task<AudioAlert> GetAllByAudioAsync(Audio audio)
+        public async Task<AudioAlert> GetAllAudioAlertsByAudioIdAsync(int id)
         {
-            await Task.CompletedTask;
-            throw new NotImplementedException();
+            return await Context.AudioAlerts!.FirstAsync(x => x.Audio.Id == id);
         }
     }
 }

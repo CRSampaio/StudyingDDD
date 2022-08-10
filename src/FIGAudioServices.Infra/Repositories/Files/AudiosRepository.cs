@@ -2,28 +2,24 @@ using FIGAudioServices.Entities.Files;
 using FIGAudioServices.Infra.Context;
 using FIGAudioServices.Infra.Interfaces.Files;
 using FIGAudioServices.Infra.Repositories.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace FIGAudioServices.Infra.Repositories.Files
 {
     public class AudiosRepository : BasicRepository<Audio>, IAudiosRepository
     {
-        private readonly FIGAudioServicesDbContext Context;
-
-        public AudiosRepository(FIGAudioServicesDbContext context)
+        public AudiosRepository(FIGAudioServicesDbContext context) : base(context)
         {
-            Context = context;
         }
 
         public async Task<IList<Audio>> GetAllAsync()
         {
-            await Task.CompletedTask;
-            throw new NotImplementedException();
+            return await Context.Audios!.ToListAsync();
         }
 
         public async Task<Audio> GetByFilenameAsync(string filename)
         {
-            await Task.CompletedTask;
-            throw new NotImplementedException();
+            return await Context.Audios!.FirstAsync(x => x.Filename.Contains(filename));
         }
     }
 }
