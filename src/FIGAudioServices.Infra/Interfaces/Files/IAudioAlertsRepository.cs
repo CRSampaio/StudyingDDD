@@ -7,6 +7,6 @@ namespace FIGAudioServices.Infra.Interfaces.Files
     {
         Task<IList<AudioAlert>> GetAllAsync();
 
-        Task<AudioAlert> GetAllByAudioAsync(Audio audio);
+        Task<AudioAlert> GetAllAudioAlertsByAudioIdAsync(int id);
     }
 }
