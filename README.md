@@ -38,3 +38,5 @@ Entities --Model
     - Files
         - Audio
         - AudioAlerts
+
+Irei utilizar o EF Core In Memory para testar a aplicação
