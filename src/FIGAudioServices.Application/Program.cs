@@ -1,4 +1,12 @@
-﻿public class Program
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace FIGAudioServices.Application
 {
-    public static void Main(string[] args) => Console.WriteLine("Hello, World!");
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            
+        }
+    }
 }
