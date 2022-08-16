@@ -1,5 +1,4 @@
-﻿using FIGAudioServices.Entities.Files;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -7,7 +6,7 @@ namespace FIGAudioServices.Application
 {
     public class Program
     {
-        public static void Main()
+        public static async Task Main()
         {
             var host = Host.CreateDefaultBuilder()
                 .ConfigureServices(services =>
@@ -27,7 +26,12 @@ namespace FIGAudioServices.Application
             {
                 Console.WriteLine("Iniciando aplicação");
 
-                host.StopAsync().Start();
+                Console.WriteLine("Criando áudios");
+                await host.Services.GetService<FIGAudioServices.Services.Interfaces.Files.IAudiosService>()!.CreateAudiosAsync();
+
+                Console.WriteLine("Criando alertas dos áudios");
+                await host.Services.GetService<FIGAudioServices.Services.Interfaces.Files.IAudioAlertsService>()!.CreateAudioAlertsAsync();
+                
                 Console.WriteLine("Finalizando aplicação");
             }
         }
