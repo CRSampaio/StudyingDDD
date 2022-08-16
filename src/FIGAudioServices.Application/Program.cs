@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FIGAudioServices.Entities.Files;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -6,8 +7,6 @@ namespace FIGAudioServices.Application
 {
     public class Program
     {
-        public IServiceProvider Services => throw new NotImplementedException();
-
         public static void Main()
         {
             var host = Host.CreateDefaultBuilder()
@@ -23,7 +22,14 @@ namespace FIGAudioServices.Application
                     });
                 })
                 .Build();
-            
+
+            using (host)
+            {
+                Console.WriteLine("Iniciando aplicação");
+
+                host.StopAsync().Start();
+                Console.WriteLine("Finalizando aplicação");
+            }
         }
     }
 }
