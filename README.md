@@ -10,8 +10,6 @@ Pude também implementar o padrão de N camadas, para deixar a aplicação mais 
 
 Ainda preciso estudar bastante sobre clean architecture, testes unitários e boas práticas para aumentar a qualidade do código escrito
 
-Application --View and Controller
-
 ## Project structure (src directory)
 
 **Application** --Applcation layer
