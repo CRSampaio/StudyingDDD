@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/FIGAudioServices.Application/FIGAudioServices.Application.csproj",
+                "${workspaceFolder}/src/FIGAudioServices.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
