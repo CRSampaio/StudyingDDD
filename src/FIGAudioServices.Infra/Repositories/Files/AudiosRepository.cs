@@ -19,7 +19,7 @@ namespace FIGAudioServices.Infra.Repositories.Files
 
         public async Task<Audio> GetByFilenameAsync(string filename)
         {
-            return await Context.Audios!.FirstAsync(x => x.Filename.Contains(filename));
+            return await Context.Audios!.FirstAsync(x => x!.Filename!.Contains(filename));
         }
     }
 }
