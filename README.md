@@ -1,42 +1,49 @@
-# C Sharp Parte Sete
+# StudyingDDD
 
-Aprendi a como nomear os argumentos ao instânciar uma classe ou invocar um metódo.
+Esse repositório começou com o intuito de colocar em prática o que foi aprendido no curso CSharp Parte Sete da Alura, porém acabou virando um estudando sobre DDD.
 
-Essa abordagem normalmente é usada em parâmetros que contém um valor padrão, os metódos com muitos valores.
+Pude aprender como funciona o framework de injeção de dependência do .NET e também o framework de hosting para aplicações.
 
-Aprendi também a como criar metódos com indexadores.
+Implementei o padrão de camada de persistência de infraestrutura utiliza EF Core Code First e In Memory.
 
-Keyword **params**, utilizada antes de um parâmetro de metódo ou construtor, serve para indicar que podem ser passados N váriaveis daquele tipo, que serão convertidas para um array
+Pude também implementar o padrão de N camadas, para deixar a aplicação mais modularizada e fácil de manutenção.
 
-Ao colocar o **<>** na frente do nome da classe, estamos declarando que a classe é de um tipo genérico que será definido no momento em que será instânciada
-
-Váriaveis do tipo valor e tipo referência
+Ainda preciso estudar bastante sobre clean architecture, testes unitários e boas práticas para aumentar a qualidade do código escrito
 
 Application --View and Controller
 
-Services --Business Logic
-    - Interfaces
-        - IProcessAudioService
-    - Services
-        - ProcessAudioService
+## Project structure (src directory)
 
-Infra --Data Storage
-    - Interfaces
-        - Base
-            - IBasicRepository
-        - Files
-            - IAudioRepository
-            - IAudioAlertsRepository
-    - Repositories
-        - Base
-            - BasicRepository
-        - Files
-            - AudioRepository
-            - AudioAlertsRepository
+**Application** --Applcation layer
 
-Entities --Model
-    - Files
-        - Audio
-        - AudioAlerts
+- Program.cs
 
-Irei utilizar o EF Core In Memory para testar a aplicação
+**Services** --Business Logic
+
+- Interfaces
+  - IAudioAlertsService
+  - IAudiosService
+- Services
+  - AudioAlertsService
+  - AudiosService
+
+**Infra** --Data Storage
+
+- Interfaces
+  - Base
+    - IBasicRepository
+  - Files
+    - IAudioRepository
+    - IAudioAlertsRepository
+- Repositories
+  - Base
+    - BasicRepository
+  - Files
+    - AudioRepository
+    - AudioAlertsRepository
+
+**Entities** --Model
+
+- Files
+  - Audio
+  - AudioAlerts
