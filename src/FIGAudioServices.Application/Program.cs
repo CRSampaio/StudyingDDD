@@ -17,22 +17,28 @@ namespace FIGAudioServices.Application
                     services.AddTransient<FIGAudioServices.Services.Interfaces.Files.IAudioAlertsService, FIGAudioServices.Services.Services.Files.AudioAlertsService>();
                     services.AddDbContext<FIGAudioServices.Infra.Context.FIGAudioServicesDbContext>(options =>
                     {
-                        options.UseInMemoryDatabase("Testing");
+                        options.UseInMemoryDatabase("FIGAudioService");
                     });
                 })
                 .Build();
 
             using (host)
             {
-                Console.WriteLine("Iniciando aplicação");
+                Console.WriteLine("Starting application");
 
-                Console.WriteLine("Criando áudios");
+                Console.WriteLine("Creating audios");
                 await host.Services.GetService<FIGAudioServices.Services.Interfaces.Files.IAudiosService>()!.CreateAudiosAsync();
 
-                Console.WriteLine("Criando alertas dos áudios");
-                await host.Services.GetService<FIGAudioServices.Services.Interfaces.Files.IAudioAlertsService>()!.CreateAudioAlertsAsync();
-                
-                Console.WriteLine("Finalizando aplicação");
+                Console.WriteLine("Audios created");
+
+                var audios = await host.Services.GetService<FIGAudioServices.Infra.Interfaces.Files.IAudiosRepository>()!.GetAllAsync();
+
+                foreach (var audio in audios)
+                {
+                    Console.WriteLine($"{nameof(FIGAudioServices.Entities.Files.Audio.Id)}: {audio.Id}, {nameof(FIGAudioServices.Entities.Files.Audio.Filename)}: {audio.Filename}");
+                }
+
+                Console.WriteLine("Exiting application");
             }
         }
     }
