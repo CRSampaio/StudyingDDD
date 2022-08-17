@@ -6,10 +6,11 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/FIGAudioServices.Application/bin/Debug/net6.0/FIGAudioServices.Application.dll>",
+            "program": "${workspaceFolder}/src/FIGAudioServices.Application/bin/Debug/net6.0/FIGAudioServices.Application.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/FIGAudioServices.Application/",
+            "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
+            "enableStepFiltering": false,
             "console": "integratedTerminal"
         }
     ]
