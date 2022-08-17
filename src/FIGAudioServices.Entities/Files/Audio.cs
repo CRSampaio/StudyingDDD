@@ -2,18 +2,20 @@
 {
     public class Audio
     {
+        private string? filename;
+
         public int Id { get; set; }
 
         public string Filename
         {
-            get => Filename;
+            get => filename!;
             set
             {
                 if (value is null)
                 {
                     throw new ArgumentNullException(nameof(Filename));
                 }
-                Filename = value;
+                filename = value;
             }
         }
     }
