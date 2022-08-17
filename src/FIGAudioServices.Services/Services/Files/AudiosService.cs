@@ -17,11 +17,11 @@ namespace FIGAudioServices.Services.Services.Files
         {
             List<Audio> audios = new List<Audio>()
             {
-                new Audio(){Id = 1, Filename = "Primeiro"},
-                new Audio(){Id = 2, Filename = "Segundo"},
-                new Audio(){Id = 3, Filename = "Terceiro"},
-                new Audio(){Id = 4, Filename = "Quarto"},
-                new Audio(){Id = 5, Filename = "Quinto"}
+                new Audio(){Id = 1, Filename = "First"},
+                new Audio(){Id = 2, Filename = "Second"},
+                new Audio(){Id = 3, Filename = "Third"},
+                new Audio(){Id = 4, Filename = "Fourth"},
+                new Audio(){Id = 5, Filename = "Fiveth"}
             };
 
             foreach (var audio in audios)

@@ -22,11 +22,11 @@ namespace FIGAudioServices.Services.Services.Files
 
             List<AudioAlert> audioAlerts = new List<AudioAlert>()
             {
-                new AudioAlert(){Id = 1, Description = "Alerta do Primeiro"},
-                new AudioAlert(){Id = 2, Description = "Alerta do Segundo"},
-                new AudioAlert(){Id = 3, Description = "Alerta do Terceiro"},
-                new AudioAlert(){Id = 4, Description = "Alerta do Quarto"},
-                new AudioAlert(){Id = 5, Description = "Alerta do Quinto"}
+                new AudioAlert(){Id = 1, Description = "First Alert"},
+                new AudioAlert(){Id = 2, Description = "Second Alert"},
+                new AudioAlert(){Id = 3, Description = "Third Alert"},
+                new AudioAlert(){Id = 4, Description = "Fourth Alert"},
+                new AudioAlert(){Id = 5, Description = "Fiveth Alert"}
             };
 
             foreach (var audioAlert in audioAlerts)
