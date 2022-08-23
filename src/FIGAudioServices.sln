@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIGAudioServices.Services",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIGAudioServices.Application", "FIGAudioServices.Application\FIGAudioServices.Application.csproj", "{948EC2A3-0801-4F78-8336-D522046DACD5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIGAudioServices.EntitiesTests", "FIGAudioServices.EntitiesTests\FIGAudioServices.EntitiesTests.csproj", "{2E7E078F-09EF-4B7F-A57A-CF5026EEBE3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{948EC2A3-0801-4F78-8336-D522046DACD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{948EC2A3-0801-4F78-8336-D522046DACD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{948EC2A3-0801-4F78-8336-D522046DACD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E7E078F-09EF-4B7F-A57A-CF5026EEBE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E7E078F-09EF-4B7F-A57A-CF5026EEBE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E7E078F-09EF-4B7F-A57A-CF5026EEBE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E7E078F-09EF-4B7F-A57A-CF5026EEBE3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
