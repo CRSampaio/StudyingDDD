@@ -27,18 +27,20 @@ namespace FIGAudioServices.Application
                 Console.WriteLine("Starting application");
 
                 Console.WriteLine("Creating audios");
+
                 await host.Services.GetService<FIGAudioServices.Services.Interfaces.Files.IAudiosService>()!.CreateAudiosAsync();
 
                 Console.WriteLine("Audios created");
 
                 var audios = await host.Services.GetService<FIGAudioServices.Infra.Interfaces.Files.IAudiosRepository>()!.GetAllAsync();
-
+                
                 foreach (var audio in audios)
                 {
                     Console.WriteLine($"{nameof(FIGAudioServices.Entities.Files.Audio.Id)}: {audio.Id}, {nameof(FIGAudioServices.Entities.Files.Audio.Filename)}: {audio.Filename}");
                 }
 
                 Console.WriteLine("Exiting application");
+                Console.WriteLine("Thread " + Thread.CurrentThread.ManagedThreadId);
             }
         }
     }
