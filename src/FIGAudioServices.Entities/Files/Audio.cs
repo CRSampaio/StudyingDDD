@@ -2,13 +2,13 @@
 {
     public class Audio
     {
-        private string? filename;
+        private string filename = string.Empty;
 
         public int Id { get; set; }
 
         public string Filename
         {
-            get => filename!;
+            get => filename;
             set
             {
                 if (value is null)

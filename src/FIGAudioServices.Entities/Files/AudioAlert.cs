@@ -3,6 +3,7 @@ namespace FIGAudioServices.Entities.Files
     public class AudioAlert
     {
         private Audio? _audio;
+        private string _description = string.Empty;
 
         public int Id { get; set; }
 
@@ -21,7 +22,18 @@ namespace FIGAudioServices.Entities.Files
                 _audio = value;
             }
         }
-        
-        public string? Description { get; set; }
+
+        public string Description
+        {
+            get => _description;
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(Description));
+                }
+                _description = value;
+            }
+        }
     }
 }
