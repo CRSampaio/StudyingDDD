@@ -7,9 +7,15 @@ namespace FIGAudioServices.EntitiesTests.Files;
 public class AudioTests
 {
     [TestMethod]
-    public void AudioNullTest()
+    public void AudioTest()
     {
+        //Arrange
         var audio = new Audio();
-        Assert.IsNotNull(audio);
+
+        //Act
+        audio.Filename = "Any filename";
+
+        //Assert
+        Assert.IsNotNull(audio.Filename);
     }
 }
