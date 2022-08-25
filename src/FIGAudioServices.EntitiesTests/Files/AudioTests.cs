@@ -7,7 +7,7 @@ namespace FIGAudioServices.EntitiesTests.Files;
 public class AudioTests
 {
     [TestMethod]
-    public void AudioTest()
+    public void Instantiating_Audio_Setting_Filename_Should_Pass()
     {
         //Arrange
         var audio = new Audio();
@@ -17,5 +17,15 @@ public class AudioTests
 
         //Assert
         Assert.IsNotNull(audio.Filename);
+    }
+
+    [TestMethod]
+    public void Instantiating_Audio_Setting_Filename_Null_Throws_Exception()
+    {
+        //Arrange
+        var audio = new Audio();
+
+        //Act & Assert
+        Assert.ThrowsException<ArgumentNullException>(() => audio.Filename = null);
     }
 }
